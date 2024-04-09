@@ -1,0 +1,47 @@
+body {
+    background-image: url("BookShelf.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;    
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 900;
+    font-size: xx-large;
+    color: rgb(5, 5, 5);
+}
+
+h2.heading {
+    font-family: "Roboto slab", serif;
+    font-weight: 900;
+    font-size: 40;
+    color: rgb(5, 5, 5);
+    background-color: rgb(189, 248, 227);
+    width: 80%;
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    border-radius: 20px;
+    border: 1px solid black;
+}
+
+.addButton {
+    padding: 20px;
+    border-radius: 20px;
+    border-width: 1px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 900;
+    font-size: large;
+    color: rgb(5, 5, 5);
+    background-color: rgb(175, 245, 221);
+}
+
+#title {
+    border-radius: 20px;
+    border-width: 1px;
+}
+
+#bookList {
+    cursor: pointer;
+}
+

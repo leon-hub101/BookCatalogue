@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Book Catalogue</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Slab:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="bookCatalogue.css" />
+  </head>
+  <body">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h2 class="heading">Create a catalogue of your favourite books</h2>
+        <br /><br />
+        <div class="col-md-12">
+          <form id="bookForm">
+            <input type="hidden" id="formMode" value="add" />
+            <input type="hidden" id="editIndex" />
+            <label for="title">Title: </label>
+            <input type="text" name="title" id="title" required /><br /><br />
+            <label for="authorFname">Author First name: </label>
+            <input
+              type="text"
+              name="authorFname"
+              id="authorFname"
+              required
+            /><br /><br />
+            <label for="authorLname">Author Last name: </label>
+            <input
+              type="text"
+              name="authorLname"
+              id="authorLname"
+              required
+            /><br /><br />
+            <label for="authorBio">About the Author: </label>
+            <textarea
+              id="authorBio"
+              name="authorBio"
+              rows="3"
+              cols="50"
+              placeholder="Write your brief author bio here..."
+            ></textarea>
+            <br /><br />
+            <label for="genre">Genre: </label>
+            <select id="genre" name="genre">
+              <option value="">Choose a genre</option>
+              <option value="Fiction">Fiction</option>
+              <option value="Fiction-Literary">- Literary Fiction</option>
+              <option value="Fiction-Mystery">- Mystery/Thriller/Crime</option>
+              <option value="Fiction-SciFi">- Science Fiction</option>
+              <option value="Fiction-Fantasy">- Fantasy</option>
+              <option value="Fiction-Romance">- Romance</option>
+              <option value="Fiction-Historical">- Historical Fiction</option>
+              <option value="Non-Fiction">Non-Fiction</option>
+              <option value="Non-Fiction-Biographies">
+                - Biographies/Autobiographies/Memoirs
+              </option>
+              <option value="Non-Fiction-SelfHelp">
+                - Self-Help/Personal Development
+              </option>
+              <option value="Non-Fiction-Health">- Health and Fitness</option>
+              <option value="Non-Fiction-Cookbooks">
+                - Cookbooks and Food
+              </option>
+              <option value="Non-Fiction-History">- History</option>
+              <option value="Non-Fiction-Science">- Science</option></select
+            ><br /><br />
+            <label for="reviews">Review: </label>
+            <textarea
+              id="reviews"
+              name="reviews"
+              rows="3"
+              cols="50"
+              placeholder="Write your review here..."
+            ></textarea
+            ><br /><br />
+            <div class="col-md-12">
+              <ul id="bookList"></ul>
+            </div>
+            <button type="button" class="addButton">
+              Save your book to the catalogue
+            </button>
+          </form>
+          <div id="editModeMessage" style="display: none">
+            Edit this book.
+          </div>
+        </div>
+        <script type="text/javascript" src="bookCatalogue.js"></script>
+      </div>
+    </div>
+  </div>
+</html>
