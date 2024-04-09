@@ -12,10 +12,8 @@ function checkLoad() {
 
 function book(title, first, last, about, genre, review) {
   this.title = title || "";
-  this.author = {
-    first: first || "",
-    last: last || "",
-  };
+  this.first = first || "",
+  this.last = last || "",
   this.about = about || "";
   this.genre = genre || "";
   this.review = review || "";
@@ -63,9 +61,9 @@ function editBook(index) {
 
   // Populate the form fields with the book's details
   document.getElementById("title").value = book.title || "";
-  document.getElementById("authorFname").value = book.author.first || "";
+  document.getElementById("authorFname").value = book.first || "";
   console.log(document.getElementById("authorLname"));
-  document.getElementById("authorLname").value = book.author.last || "";
+  document.getElementById("authorLname").value = book.last || "";
   document.getElementById("authorBio").value = book.about || "";
   document.getElementById("genre").value = book.genre || "";
   document.getElementById("reviews").value = book.review || "";
@@ -92,7 +90,7 @@ function displayBooks() {
 
   bookCat.forEach((book, index) => {
     const bookElement = document.createElement("li");
-    bookElement.innerHTML = `Title: ${book.title}, Author: ${book.author.first} ${book.author.last}, About the author: ${book.about}, Genre: ${book.genre}, Review: ${book.review}`;
+    bookElement.innerHTML = `Title: ${book.title}, Author: ${book.first} ${book.last}, About the author: ${book.about}, Genre: ${book.genre}, Review: ${book.review}`;
 
     // Close (delete) button
     let span = document.createElement("span");
